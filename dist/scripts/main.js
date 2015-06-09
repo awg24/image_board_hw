@@ -5,6 +5,18 @@ $(document).ready(function(){
 	$imageForm = $("#image-form");
 	var clicks = true;
 	$imageForm.hide();
+	
+	var arrayOfObjImages = [];
+
+	$.get("url here", function(data){
+		for(var j = 0; j < data.length; j++){
+			var newImage = new ImageHolder();
+			newImage.set({
+				imageUrl: data[j].imageUrl,
+				theCaption: data[j].caption});
+			arrayOfObjImages.push(newImage);
+		}
+	});
 
 	$buttonExpand.on("click", function(){
 		if(clicks){
