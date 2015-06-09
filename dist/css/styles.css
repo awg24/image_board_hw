@@ -40,3 +40,6 @@ body {
 .increase-margin {
 	margin-right: 30px;
 }
+#place-image-here {
+	display: none;
+}

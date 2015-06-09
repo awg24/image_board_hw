@@ -17,31 +17,37 @@
 		<form>
 			<input class="form-control" id="image-url" type="text" placeholder="Add image URL">
 			<textarea class="form-control" id="caption"rows="3" placeholder="Add a Caption"></textarea>
-			<br><br>
+			<div id="error-message" class="text-center text-danger"></div>
+			<div id="success-message" class="text-center text-success"></div>
+			<br>
 			<div class="btn-center">
-				<button type="button" class="btn increase-margin btn-danger">Cancel</button>
-				<button type="button" class="btn btn-success"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Add Photo</button>
+				<button id="cancel" type="button" class="btn increase-margin btn-danger">Cancel</button>
+				<button id="submit-image"type="button" class="btn btn-success"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Add Photo</button>
 			</div>
 		</form>	
 	</div>
-	<div class="container">
-		<div class="col-xs-2"></div>
-		  <div class="col-xs-8">
-		    <div class="apply-box-shadow thumbnail">
-		      <img src="http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg">
-		      <div class="caption">
-		        <h3>Thumbnail label</h3>
-		        <p>...</p>
-		      </div>
-		    </div>
-		  </div>
-		  <div class="col-xs-2"></div>
-	 </div>
+	<div id="place-image-here"></div>
+	 <script type="text/template" id="image-holder">
+		 <div data-id="<%= _id >"class="container">
+			<div class="col-xs-2"></div>
+			  <div class="well col-xs-8">
+			    <div class="apply-box-shadow thumbnail">
+			      <img class="img-responsive" src="<%= imageUrl %>">
+			      <div class="caption">
+			        <p ><h3 class="text-center"><%= theCaption %></h3></p>
+			        <button class="btn btn-danger" id="delete-pic">Delete</button>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="col-xs-2"></div>
+		 </div>
+	 </script>
 
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
 	<script type="text/javascript" src="bower_components/backbone/backbone-min.js"></script>
-	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="scripts/models/imageBoard.js"></script>
+	<script type="text/javascript" src="scripts/collections/ImagesCollection.js"></script>
 	<script type="text/javascript" src="scripts/main.js"></script>
 </body>
 </html>
