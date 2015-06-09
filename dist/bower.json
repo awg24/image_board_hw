@@ -1,0 +1,20 @@
+{
+  "name": "dist",
+  "version": "0.0.0",
+  "authors": [
+    "allen wes <allen.wes.g@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "backbone": "~1.2.1",
+    "jquery": "~2.1.4"
+  }
+}

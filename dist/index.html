@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Board</title>
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button class="btn btn-stylized" id="expand-to-menu"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span></button>
+			</div>
+		</div>
+	</nav>
+	<div id="image-form">
+		<form>
+			<input class="form-control" id="image-url" type="text" placeholder="Add image URL">
+			<textarea class="form-control" id="caption"rows="3" placeholder="Add a Caption"></textarea>
+			<br><br>
+			<div class="btn-center">
+				<button type="button" class="btn increase-margin btn-danger">Cancel</button>
+				<button type="button" class="btn btn-success"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Add Photo</button>
+			</div>
+		</form>	
+	</div>
+	<div class="container">
+		<div class="col-xs-2"></div>
+		  <div class="col-xs-8">
+		    <div class="apply-box-shadow thumbnail">
+		      <img src="http://www.hdwallpapersimages.com/wp-content/uploads/2014/01/Winter-Tiger-Wild-Cat-Images.jpg">
+		      <div class="caption">
+		        <h3>Thumbnail label</h3>
+		        <p>...</p>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="col-xs-2"></div>
+	 </div>
+
+	<script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
+	<script type="text/javascript" src="bower_components/backbone/backbone-min.js"></script>
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/models/imageBoard.js"></script>
+	<script type="text/javascript" src="scripts/main.js"></script>
+</body>
+</html>
