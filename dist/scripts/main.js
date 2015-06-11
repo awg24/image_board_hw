@@ -13,11 +13,6 @@ $(document).ready(function(){
 				$("#place-image-here").prepend(imageHolderBuilder(image.attributes));
 				$("#place-image-here").fadeIn(3000);
 			});
-
-			$("#delete-pic").on("click", function(){
-				console.log("still workin")
-			});
-			
 		}
 	});
 
